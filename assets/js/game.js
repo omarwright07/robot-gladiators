@@ -41,11 +41,11 @@ var fight = function(enemy) {
             if (fightOrSkip()) {
                 break;
             }
-            // Subtract the value of 'playerInfo.attack' from the value of 'enemy.health' and use that result to update the value in the 'enemy.health' variable
+            // Subtract the value of 'playerInfo.attack' from the value of 'enemy.health' and use that result to update the value in the 'enemy.health' variablegit a
             var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
             enemy.health = Math.max(0, enemy.health - damage);
 
-            window.alert(
+            console.log(
                 playerInfo.name + " attacked " + enemy.name + ". " + enemy.name + " now has " + enemy.health + " health remaining."
             );
 
@@ -65,7 +65,7 @@ var fight = function(enemy) {
         } else {
             var damage = randomNumber(enemy.attack - 3, enemy.attack);
             playerInfo.health = Math.max(0, playerInfo.health - damage);
-            window.alert(
+            console.log(
                 enemy.name + " attacked " + playerInfo.name + ". " + playerInfo.name + " now has " + playerInfo.health + " health remaining."
             );
 
@@ -183,21 +183,14 @@ var randomNumber = function(min, max) {
     return value; 
 };
 
-<<<<<<< HEAD
-=======
 // function to set name
->>>>>>> develop
 var getPlayerName = function() {
     var name = "";
 
     while (name === "" || name === null) {
         name = prompt("What is your robot's name?");
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> develop
     console.log("Your robot's name is " + name);
     return name;
 }
@@ -247,11 +240,6 @@ var enemyInfo = [
       attack: randomNumber(10, 14)
     }
 ];
-
-console.log(enemyInfo);
-console.log(enemyInfo[0]);
-console.log(enemyInfo[0].name);
-console.log(enemyInfo[0]['attack']);
 
 // start first game when page loads
 startGame();
